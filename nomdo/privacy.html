@@ -24,79 +24,86 @@
            color: #8a8178; font-size: 14px; }
 </style>
 <body>
+<!-- Covers the enabled purchase-server integration and separately disclosed upcoming SDK update. Local source; publication is recorded separately. -->
 <p class="nav"><a href="index.html">← Support</a> · <a href="#ru">Русский</a></p>
 <h1>Privacy Policy</h1>
-<p class="upd">Nomdo. Updated 15 October 2026.</p>
+<p class="upd">Nomdo. Updated 21 October 2026.</p>
 
-<p><b>Nomdo collects no personal data.</b> There is no account, no advertising, no analytics and no tracking.</p>
+<p>Nomdo does not require an account. Your personal recipe content stays on your device. Purchase information is processed separately. Usage analytics depends on the app version, as explained below.</p>
+
+<h2>Current version and upcoming update</h2>
+<p><b>Current App Store version, as of 21 October 2026:</b> Apple is configured to send new purchase events to RevenueCat. This happens between servers and does not require an app update. This version does not send app-open, screen-view or subscription-screen interaction events to RevenueCat or ActivationPal, and does not send Apple Ads attribution tokens through these services.</p>
+<p><b>Upcoming update:</b> we are preparing an app version with RevenueCat and ActivationPal integration. The usage analytics and Apple Ads collection described below will begin only after you install that version. It cannot reconstruct your earlier app sessions or subscription-screen interactions. This notice does not mean that the update is already available.</p>
 
 <h2>What stays on your device</h2>
-<ul>
-<li>your favorite breakfasts;</li>
-<li>the list of ingredients you have at home;</li>
-<li>app language and appearance.</li>
-</ul>
-<p>All of this is stored only on your device, in the app's protected container. Breakfast matching and ingredient search work offline.</p>
+<p>Your ingredients, favorite breakfasts, personal recipes, photos, language and appearance preferences are stored in the app's protected container. They are not sent to our analytics services. Breakfast matching and ingredient-name search work offline. If you choose to share a photo, iOS sends the selected image to the app or recipient you choose; that service has its own privacy practices. Device backups are controlled by your Apple settings.</p>
 
-<h2>New breakfasts from our server</h2>
-<p>The app downloads a shared public catalog of new breakfasts and their pictures from our server. The request is the same for everyone and contains none of your ingredients, favorites or other personal data. We do not keep access logs for these requests.</p>
+<h2>New breakfasts</h2>
+<p>The app downloads a shared public catalog and its pictures from our server. Catalog requests do not include your ingredients, favorites, personal recipes or photos. The server receives the network address needed to deliver a response. We do not keep access logs for these catalog requests.</p>
 
 <h2>Purchases</h2>
-<p>Apple processes the Nomdo Pro subscription and the one-time Lifetime purchase. We never receive your card details or your Apple ID; the app only receives Apple's confirmation that Pro is active. Manage or cancel a subscription in Settings → your name → Subscriptions.</p>
+<p>Apple processes Nomdo Pro subscriptions and the one-time Lifetime purchase. Apple confirms access in the app; we do not receive your payment card details or Apple ID. The enabled server integration sends RevenueCat transaction identifiers, product and purchase information, subscription status and related events such as trials, renewals, cancellations and refunds. RevenueCat can associate these records with a pseudonymous customer identifier. We use them to verify and analyse purchases. When forwarding to ActivationPal is enabled, ActivationPal also receives these purchase events; the current app version does not supply a usage journey to join them to.</p>
+<p>In the upcoming update, the app will also send verified transactions and restore information to RevenueCat. Its random customer ID will be shared with ActivationPal to connect purchase records with that version's usage events.</p>
 
-<h2>What we do not do</h2>
-<ul>
-<li>we do not collect your name, email, phone number or anything else that identifies you;</li>
-<li>we do not show advertising or use analytics services;</li>
-<li>we do not sell or share data, and we do not track you across apps or websites.</li>
-</ul>
+<h2>Usage analytics and Apple Ads</h2>
+<p><b>This section applies only to the upcoming analytics-enabled app version after you install it.</b> ActivationPal will receive app-open and screen-view events, subscription-screen interactions, plan choices, purchase results and restore results. These events describe fixed actions and categories; they do not include recipe names, search text, ingredient lists, favorite lists, personal recipes or photographs.</p>
+<p>Events carry a random installation ID, session and event IDs, the RevenueCat customer ID, timestamps, app version/build, iOS version, device model, locale, app language, time zone, App Store country and an approximate installation date. Its hosting provider derives an approximate country and city from the connection's IP address. We do not request GPS location. Hosting providers receive IP addresses and may retain them in operational logs.</p>
+<p>To measure installs from our Apple Ads campaigns, the app sends an Apple attribution token to RevenueCat and ActivationPal. The services use it to obtain Apple's attribution result. Nomdo does not collect the IDFA advertising identifier, show in-app ads, sell analytics data or use this integration to track you across other companies' apps and websites.</p>
 
-<h2>Deleting your data</h2>
-<p>Remove ingredients and favorites in the app. Deleting the app removes all of its data from the device. Deleting the app does not cancel a subscription.</p>
+<h2>Service providers</h2>
+<p>RevenueCat processes purchase data for Nomdo. ActivationPal receives purchase data when forwarding is enabled and usage data from the upcoming analytics-enabled version. These services store analytics data in the United States. Apple handles App Store payments and Apple Ads attribution. Connections use HTTPS. More information: <a href="https://www.revenuecat.com/privacy">RevenueCat</a>, <a href="https://activationpal.com/docs/privacy-security.md">ActivationPal</a> and <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
-<h2>Children</h2>
-<p>The app is not directed at children and collects no data from anyone, including children.</p>
+<h2>Retention and your choices</h2>
+<p>Remove ingredients and favorites in the app. Deleting the app removes its local data; device backups may retain a copy. It does not cancel a subscription or delete records already held by analytics providers. Manage or cancel a subscription in Settings → your name → Subscriptions.</p>
+<p>The current app has no setting to stop server-side purchase notifications. The upcoming analytics-enabled version is also planned without an in-app usage-analytics switch. ActivationPal has no automatic expiry for records it receives. RevenueCat records are retained for purchase support and analytics while we use the service, subject to deletion requests and any applicable retention obligations. We do not promise a fixed deletion deadline for providers' logs or backups.</p>
+<p>For access, correction or deletion requests, email <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>. We may need an identifier we can match, such as a purchase transaction reference, because analytics records use random IDs rather than your name or email. Without a matching identifier we may be unable to locate your records. Do not send payment card details or passwords. Some purchase records may need to be retained for refunds or legal obligations.</p>
+
+<h2>Support and children</h2>
+<p>If you email us, we receive your email address and the information you choose to include, and use them to answer your request. Nomdo is not designed specifically for children.</p>
 
 <h2>Changes and contact</h2>
-<p>If this policy changes, the new version will appear on this page with a new date. Questions: <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>.</p>
+<p>We update this page when our practices change. Questions: <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>.</p>
 
 <hr>
 
 <div lang="ru" id="ru">
 <h1>Политика конфиденциальности</h1>
-<p class="upd">Nomdo. Обновлено 15 октября 2026 года.</p>
+<p class="upd">Nomdo. Обновлено 21 октября 2026 года.</p>
 
-<p><b>Nomdo не собирает персональные данные.</b> Нет учётной записи, рекламы, аналитики и отслеживания.</p>
+<p>Для Nomdo не нужна учётная запись. Содержимое ваших личных рецептов хранится на устройстве. Сведения о покупках обрабатываются отдельно. Аналитика использования зависит от версии приложения — различия описаны ниже.</p>
+
+<h2>Текущая версия и готовящееся обновление</h2>
+<p><b>Текущая версия в App Store на 21 октября 2026 года:</b> Apple настроена на передачу новых событий покупок в RevenueCat. Это обмен между серверами, для него не нужно обновлять приложение. Эта версия не отправляет в RevenueCat и ActivationPal события открытия приложения и экранов или действий на экране подписки и не передаёт через эти сервисы токены атрибуции Apple Ads.</p>
+<p><b>Готовящееся обновление:</b> мы готовим версию приложения с интеграцией RevenueCat и ActivationPal. Описанная ниже аналитика использования и атрибуция Apple Ads начнут работать только после установки этой версии. Они не восстанавливают ваши прежние сессии и действия на экране подписки. Эта политика не означает, что обновление уже доступно.</p>
 
 <h2>Что хранится на устройстве</h2>
-<ul>
-<li>избранные завтраки;</li>
-<li>список продуктов, которые есть дома;</li>
-<li>язык и тема оформления.</li>
-</ul>
-<p>Всё это хранится только на вашем устройстве, в защищённом контейнере приложения. Подбор завтраков и поиск продуктов работают без интернета.</p>
+<p>Ваши продукты, избранные завтраки, личные рецепты, фотографии, язык и тема оформления сохраняются в защищённом контейнере приложения. Эти данные не отправляются в сервисы аналитики. Подбор завтраков и поиск названий продуктов работают без интернета. Если вы решите поделиться фотографией, iOS передаст выбранную картинку указанному вами приложению или получателю; у этого сервиса действуют свои правила конфиденциальности. Резервные копии устройства зависят от настроек Apple.</p>
 
-<h2>Новые завтраки с нашего сервера</h2>
-<p>Приложение загружает общий публичный каталог новых завтраков и их картинки с нашего сервера. Запрос одинаков для всех и не содержит ваших продуктов, избранного или других личных данных. Журналы доступа для этих запросов мы не ведём.</p>
+<h2>Новые завтраки</h2>
+<p>Приложение загружает общий публичный каталог и картинки с нашего сервера. Запросы каталога не содержат ваших продуктов, избранного, личных рецептов или фотографий. Сервер получает сетевой адрес, необходимый для доставки ответа. Журналы доступа для этих запросов мы не ведём.</p>
 
 <h2>Покупки</h2>
-<p>Подписку Nomdo Pro и разовую покупку «Навсегда» обрабатывает Apple. Мы не получаем данные банковской карты и ваш Apple ID; приложение получает от Apple только подтверждение, что Pro активен. Управлять подпиской и отменить её можно в «Настройки» → ваше имя → «Подписки».</p>
+<p>Apple обрабатывает подписку Nomdo Pro и разовую покупку «Навсегда». Apple подтверждает доступ в приложении; мы не получаем данные банковской карты или ваш Apple ID. Включённая серверная интеграция передаёт RevenueCat идентификаторы транзакций, сведения о товаре и покупке, статус подписки и связанные события: пробные периоды, продления, отмены и возвраты. RevenueCat может связывать записи с псевдонимным идентификатором клиента. Эти сведения нужны для проверки и анализа покупок. При включённой передаче в ActivationPal этот сервис также получает события покупок; текущая версия приложения не передаёт путь использования, с которым их можно связать.</p>
+<p>В готовящемся обновлении приложение также будет передавать RevenueCat подтверждённые транзакции и сведения о восстановлении. Случайный идентификатор клиента будет передаваться в ActivationPal, чтобы связать покупки с событиями использования этой версии.</p>
 
-<h2>Чего мы не делаем</h2>
-<ul>
-<li>не собираем имя, почту, телефон и другие данные, по которым можно вас узнать;</li>
-<li>не показываем рекламу и не используем сервисы аналитики;</li>
-<li>не продаём и не передаём данные и не отслеживаем вас в других приложениях и на сайтах.</li>
-</ul>
+<h2>Аналитика и Apple Ads</h2>
+<p><b>Этот раздел относится только к готовящейся версии с аналитикой после её установки.</b> ActivationPal будет получать события открытия приложения и экранов, действия на экране подписки, выбор тарифа, результаты покупки и восстановления. События содержат заданные действия и категории; в них нет названий рецептов, поисковых запросов, списка продуктов, списка избранного, личных рецептов или фотографий.</p>
+<p>Вместе с событиями передаются случайный идентификатор установки, идентификаторы сессии и события, идентификатор клиента RevenueCat, время, версия и номер сборки приложения, версия iOS, модель устройства, региональные настройки, язык приложения, часовой пояс, страна App Store и примерная дата установки. Хостинг сервиса определяет примерные страну и город по IP-адресу подключения. Мы не запрашиваем геолокацию GPS. Провайдеры хостинга получают IP-адрес и могут хранить его в технических журналах.</p>
+<p>Чтобы измерять установки из наших кампаний Apple Ads, приложение передаёт токен атрибуции Apple в RevenueCat и ActivationPal. По нему сервисы получают результат атрибуции Apple. Nomdo не собирает рекламный идентификатор IDFA, не показывает рекламу внутри приложения, не продаёт данные аналитики и не использует эту интеграцию для отслеживания вас в чужих приложениях и на сайтах.</p>
 
-<h2>Удаление данных</h2>
-<p>Продукты и избранное можно удалить в приложении. Удаление приложения стирает все его данные с устройства. Удаление приложения не отменяет подписку.</p>
+<h2>Сервисы обработки данных</h2>
+<p>RevenueCat обрабатывает сведения о покупках Nomdo. ActivationPal получает сведения о покупках при включённой передаче, а сведения об использовании — из готовящейся версии с аналитикой. Эти сервисы хранят данные аналитики в США. Apple отвечает за оплату в App Store и атрибуцию Apple Ads. Соединения используют HTTPS. Подробнее: <a href="https://www.revenuecat.com/privacy">RevenueCat</a>, <a href="https://activationpal.com/docs/privacy-security.md">ActivationPal</a> и <a href="https://www.apple.com/legal/privacy/">Apple</a>.</p>
 
-<h2>Дети</h2>
-<p>Приложение не предназначено специально для детей и ни у кого, в том числе у детей, не собирает данные.</p>
+<h2>Хранение и управление данными</h2>
+<p>Продукты и избранное можно удалить в приложении. Удаление приложения стирает локальные данные; копия может сохраняться в резервной копии устройства. Оно не отменяет подписку и не удаляет уже отправленные данные аналитики. Подпиской можно управлять в «Настройки» → ваше имя → «Подписки».</p>
+<p>В текущем приложении нет настройки для остановки серверных уведомлений о покупках. Готовящаяся версия с аналитикой также пока не предусматривает выключателя аналитики использования. У ActivationPal нет автоматического срока удаления полученных записей. Записи RevenueCat сохраняются для поддержки и анализа покупок, пока мы используем сервис, с учётом запросов на удаление и применимых требований к хранению. Мы не обещаем фиксированный срок удаления журналов и резервных копий провайдеров.</p>
+<p>Чтобы запросить доступ, исправление или удаление данных, напишите на <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>. Для поиска записей может понадобиться сопоставимый идентификатор, например номер транзакции покупки: в аналитике используются случайные идентификаторы, а не ваше имя или почта. Без такого идентификатора мы можем не найти ваши записи. Не присылайте данные банковской карты или пароли. Некоторые записи покупок могут сохраняться для возвратов или выполнения требований закона.</p>
+
+<h2>Поддержка и дети</h2>
+<p>Если вы пишете нам, мы получаем ваш адрес электронной почты и сведения, которые вы включили в письмо, и используем их для ответа. Nomdo не предназначено специально для детей.</p>
 
 <h2>Изменения и связь</h2>
-<p>Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы: <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>.</p>
+<p>Мы обновляем эту страницу при изменении обработки данных. Вопросы: <a href="mailto:artsaverin@gmail.com">artsaverin@gmail.com</a>.</p>
 </div>
 
 <footer><a href="index.html">Support</a> · Privacy Policy</footer>
