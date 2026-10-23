@@ -24,19 +24,24 @@
            color: #8a8178; font-size: 14px; }
 </style>
 <body>
-<!-- Version-specific policy for Nomdo 1.0 and 1.1. Release draft; publication is recorded separately. -->
+<!-- Version-specific policy for Nomdo 1.0, 1.1 and 1.2. Release draft; publication is recorded separately. -->
 <p class="nav"><a href="index.html">← Support</a> · <a href="#ru">Русский</a></p>
 <h1>Privacy Policy</h1>
-<p class="upd">Nomdo. Updated 21 October 2026.</p>
+<p class="upd">Nomdo. Updated 23 October 2026.</p>
 
 <p>Nomdo does not require an account. Your personal recipe content stays on your device. Purchase information is processed separately. Usage analytics depends on the app version, as explained below.</p>
+
+<h2>Nomdo 1.2: our own analytics</h2>
+<p>Nomdo 1.2 replaces the ActivationPal client with our own analytics service. The app sends fixed app-open, screen, recipe-opening, favorite-change, filter, product-count, serving, photo-share and purchase-flow events. Events include random installation, session and event IDs, timestamps, the RevenueCat customer ID, app version/build and selected app language. A first-open event may also include an approximate app-container age in days and an installation-context category. Recipe content, ingredient names, favorite lists and photos are not sent. This version does not send Apple Ads attribution tokens to our analytics service; RevenueCat retains its separate Apple Ads integration.</p>
+<p>Our collector stores pseudonymous HMAC identifiers rather than raw installation, session or RevenueCat customer IDs. It removes usage events after 90 days (test events after seven days). The network address is needed for delivery and temporary rate limiting; our usage records do not store it or derive a city from it. RevenueCat purchase records have their own retention policy. Existing installations keep their previous local data, and updating is not counted as a new installation.</p>
+<p>Older app versions may continue sending usage data to ActivationPal. The separate RevenueCat integration also continues forwarding purchase events to ActivationPal, including purchases associated with newer app versions. Updating does not erase records already held there, and we have not deleted its historical records. The provider and retention descriptions below remain applicable to those records. Nomdo 1.2 has no usage-analytics switch; contact us for access or deletion requests.</p>
 
 <h2>Nomdo 1.0 and 1.1</h2>
 <p><b>Nomdo 1.0:</b> Apple is configured to send new purchase events to RevenueCat. This happens between servers and does not require an app update. This version does not send app-open, screen-view or subscription-screen interaction events to RevenueCat or ActivationPal, and does not send Apple Ads attribution tokens through these services.</p>
 <p><b>Nomdo 1.1:</b> RevenueCat and ActivationPal integration adds usage analytics and Apple Ads measurement after you install this version. It cannot reconstruct earlier app sessions or subscription-screen interactions. A first SDK launch may belong to an existing installation that has updated.</p>
 
 <h2>What stays on your device</h2>
-<p>Your ingredients, favorite breakfasts, personal recipes, photos and appearance preferences stay in the app’s protected container and are not sent to analytics services. Your selected app language is included in analytics context in version 1.1. Breakfast matching and ingredient-name search work offline. If you choose to share a photo, iOS sends the selected image to the app or recipient you choose; that service has its own privacy practices. Device backups are controlled by your Apple settings.</p>
+<p>Your ingredients, favorite breakfasts, personal recipes, photos and appearance preferences stay in the app’s protected container and are not sent to analytics services. Your selected app language is included in analytics context in versions 1.1 and 1.2. Breakfast matching and ingredient-name search work offline. If you choose to share a photo, iOS sends the selected image to the app or recipient you choose; that service has its own privacy practices. Device backups are controlled by your Apple settings.</p>
 
 <h2>New breakfasts</h2>
 <p>The app downloads a shared public catalog and its pictures from our server. Catalog requests do not include your ingredients, favorites, personal recipes or photos. The server receives the network address needed to deliver a response. We do not keep access logs for these catalog requests.</p>
@@ -44,6 +49,7 @@
 <h2>Purchases</h2>
 <p>Apple processes Nomdo Pro subscriptions and the one-time Lifetime purchase. Apple confirms access in the app; we do not receive your payment card details or Apple ID. The enabled server integration sends RevenueCat transaction identifiers, product and purchase information, subscription status and related events such as trials, renewals, cancellations and refunds. RevenueCat can associate these records with a pseudonymous customer identifier. We use them to verify and analyse purchases. When forwarding to ActivationPal is enabled, ActivationPal also receives these purchase events; version 1.0 does not supply a usage journey to join them to.</p>
 <p>In Nomdo 1.1, the app also sends verified transactions and restore information to RevenueCat. Its random customer ID is shared with ActivationPal to connect purchase records with that version's usage events.</p>
+<p>Nomdo 1.2 continues sending verified transactions and restore information to RevenueCat. RevenueCat also forwards purchase and subscription events to our own server, and we have imported available earlier purchase records. Our server stores pseudonymous customer and transaction identifiers, product identifiers, amounts, dates and supported subscription lifecycle details for purchase analytics, reconciliation and support. The 90-day limit for usage events does not apply to these purchase records. They are retained while we use the service, subject to deletion requests and applicable retention obligations.</p>
 
 <h2>Usage analytics and Apple Ads</h2>
 <p><b>This section applies to Nomdo 1.1 after you install it.</b> ActivationPal receives app-open and screen-view events, subscription-screen interactions, plan choices, purchase and restore results, recipe-opening and favorite-change actions, filter and saved-product counts, servings changes, and photo-share flow outcomes. These events describe fixed actions, categories and counts; they do not include recipe names, search text, ingredient lists, favorite lists, personal recipes or photographs. A completed system share action does not establish that a social post was published.</p>
@@ -68,16 +74,21 @@
 
 <div lang="ru" id="ru">
 <h1>Политика конфиденциальности</h1>
-<p class="upd">Nomdo. Обновлено 21 октября 2026 года.</p>
+<p class="upd">Nomdo. Обновлено 23 октября 2026 года.</p>
 
 <p>Для Nomdo не нужна учётная запись. Содержимое ваших личных рецептов хранится на устройстве. Сведения о покупках обрабатываются отдельно. Аналитика использования зависит от версии приложения — различия описаны ниже.</p>
+
+<h2>Nomdo 1.2: собственная аналитика</h2>
+<p>В Nomdo 1.2 клиент ActivationPal заменён собственной аналитикой. Приложение передаёт фиксированные события открытия приложения, экранов и рецептов, изменения избранного, фильтров, количества продуктов и порций, процесса обмена фото и покупки. События содержат случайные идентификаторы установки, сессии и события, время, идентификатор клиента RevenueCat, версию и номер сборки приложения и выбранный язык. Событие первого открытия также может содержать примерный возраст контейнера приложения в днях и категорию контекста установки. Содержимое рецептов, названия продуктов, списки избранного и фотографии не передаются. Эта версия не отправляет токены атрибуции Apple Ads в нашу аналитику; отдельная интеграция RevenueCat с Apple Ads сохраняется.</p>
+<p>Наш сборщик хранит псевдонимные HMAC-идентификаторы вместо исходных идентификаторов установки, сессии и клиента RevenueCat. События использования удаляются через 90 дней, тестовые — через семь. Сетевой адрес нужен для доставки и временного ограничения частоты запросов; он не сохраняется в записях использования и не используется для определения города. Для записей о покупках в RevenueCat действуют отдельные правила хранения. Прежние локальные данные сохраняются, обновление не считается новой установкой.</p>
+<p>Старые версии приложения могут продолжать передавать события использования в ActivationPal. Отдельная интеграция RevenueCat также продолжает передавать события покупок в ActivationPal, в том числе покупки, связанные с новыми версиями приложения. Обновление не удаляет уже полученные сервисом записи; исторические данные не удалялись. Описания поставщиков и сроков хранения ниже остаются применимы к этим записям. В Nomdo 1.2 нет выключателя аналитики использования; для доступа к данным или их удаления напишите нам.</p>
 
 <h2>Nomdo 1.0 и 1.1</h2>
 <p><b>Nomdo 1.0:</b> Apple настроена на передачу новых событий покупок в RevenueCat. Это обмен между серверами, для него не нужно обновлять приложение. Эта версия не отправляет в RevenueCat и ActivationPal события открытия приложения и экранов или действий на экране подписки и не передаёт через эти сервисы токены атрибуции Apple Ads.</p>
 <p><b>Nomdo 1.1:</b> интеграция RevenueCat и ActivationPal добавляет аналитику использования и измерение Apple Ads после установки этой версии. Она не восстанавливает прежние сессии или действия на экране подписки. Первый запуск SDK может относиться к прежней установке, которая обновилась.</p>
 
 <h2>Что хранится на устройстве</h2>
-<p>Ваши продукты, избранные завтраки, личные рецепты, фотографии и тема оформления сохраняются в защищённом контейнере приложения и не передаются в аналитику. Выбранный язык приложения входит в контекст аналитики версии 1.1. Подбор завтраков и поиск названий продуктов работают без интернета. Если вы решите поделиться фотографией, iOS передаст выбранную картинку указанному вами приложению или получателю; у этого сервиса действуют свои правила конфиденциальности. Резервные копии устройства зависят от настроек Apple.</p>
+<p>Ваши продукты, избранные завтраки, личные рецепты, фотографии и тема оформления сохраняются в защищённом контейнере приложения и не передаются в аналитику. Выбранный язык приложения входит в контекст аналитики версий 1.1 и 1.2. Подбор завтраков и поиск названий продуктов работают без интернета. Если вы решите поделиться фотографией, iOS передаст выбранную картинку указанному вами приложению или получателю; у этого сервиса действуют свои правила конфиденциальности. Резервные копии устройства зависят от настроек Apple.</p>
 
 <h2>Новые завтраки</h2>
 <p>Приложение загружает общий публичный каталог и картинки с нашего сервера. Запросы каталога не содержат ваших продуктов, избранного, личных рецептов или фотографий. Сервер получает сетевой адрес, необходимый для доставки ответа. Журналы доступа для этих запросов мы не ведём.</p>
@@ -85,6 +96,7 @@
 <h2>Покупки</h2>
 <p>Apple обрабатывает подписку Nomdo Pro и разовую покупку «Навсегда». Apple подтверждает доступ в приложении; мы не получаем данные банковской карты или ваш Apple ID. Включённая серверная интеграция передаёт RevenueCat идентификаторы транзакций, сведения о товаре и покупке, статус подписки и связанные события: пробные периоды, продления, отмены и возвраты. RevenueCat может связывать записи с псевдонимным идентификатором клиента. Эти сведения нужны для проверки и анализа покупок. При включённой передаче в ActivationPal этот сервис также получает события покупок; версия 1.0 не передаёт путь использования, с которым их можно связать.</p>
 <p>В Nomdo 1.1 приложение также передаёт RevenueCat подтверждённые транзакции и сведения о восстановлении. Случайный идентификатор клиента передаётся в ActivationPal, чтобы связать покупки с событиями использования этой версии.</p>
+<p>Nomdo 1.2 продолжает передавать RevenueCat подтверждённые транзакции и сведения о восстановлении. RevenueCat также передаёт события покупок и подписок на наш сервер; мы импортировали доступные сведения о прежних покупках. Наш сервер хранит псевдонимные идентификаторы клиентов и транзакций, идентификаторы продуктов, суммы, даты и поддерживаемые сведения о жизненном цикле подписки для анализа, сверки и поддержки покупок. Ограничение в 90 дней для событий использования не относится к этим записям о покупках. Они сохраняются, пока мы используем сервис, с учётом запросов на удаление и применимых требований к хранению.</p>
 
 <h2>Аналитика и Apple Ads</h2>
 <p><b>Этот раздел относится к Nomdo 1.1 после её установки.</b> ActivationPal получает события открытия приложения и экранов, действия на экране подписки, выбор тарифа, результаты покупки и восстановления, открытие рецептов и изменение избранного, количество фильтров и сохранённых продуктов, изменение порций и результаты сценария отправки фото. События содержат заданные действия, категории и числа; в них нет названий рецептов, поисковых запросов, списков продуктов и избранного, личных рецептов или фотографий. Завершение системного действия «Поделиться» не означает, что пост опубликован в социальной сети.</p>
