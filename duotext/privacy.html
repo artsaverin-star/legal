@@ -28,9 +28,9 @@
 <body>
 <p class="nav"><a href="index.html">← Support</a></p>
 <h1>Privacy Policy</h1>
-<p class="upd">Duotext. Updated 8 October 2026.</p>
+<p class="upd">Duotext. Updated 26 October 2026.</p>
 
-<p><b>Your books, translations and saved words stay on your device.</b> Anonymous purchase, usage and Apple Ads attribution data are described below.</p>
+<p><b>Your books, translations and saved words stay on your device.</b> Limited purchase, usage and Apple Ads attribution data are described below.</p>
 
 <h2>What the app stores</h2>
 <ul>
@@ -39,7 +39,7 @@
 <li>words you save, together with the sentences they came from;</li>
 <li>reading settings: theme, font, type size, translation mode.</li>
 </ul>
-<p>All of this is stored <b>locally on the device</b>, in the app's protected container. There is no account and no server of ours behind the app.</p>
+<p>All of this is stored <b>locally on the device</b>, in the app's protected container. No account is required. From version 1.5.7, a separate analytics service operated by us receives only the limited events described below; it does not receive your reading content.</p>
 
 <h2>Translation happens on the device</h2>
 <p>Duotext translates with Apple's built-in translation system that runs on the device itself. The text of your books is <b>not sent to us or to any third-party service</b>. Language packs are downloaded to your device by iOS from Apple.</p>
@@ -52,19 +52,23 @@
 
 <h2>What we do not do</h2>
 <ul>
-<li>we do not collect your name, email, phone number or anything else that identifies you;</li>
+<li>the app does not request your name, email or phone number; random app identifiers used for analytics are described below;</li>
 <li>the app does not display third-party advertising;</li>
-<li>we never sell your data, and we never share the content of your books, your translations or your saved words with anyone — anonymous purchase events, usage statistics and Apple Ads attribution data are described below;</li>
+<li>we never sell your data, and we never share the content of your books, your translations or your saved words with anyone — limited purchase events, usage statistics and Apple Ads attribution data are described below;</li>
 <li>we do not track you across apps or websites.</li>
 </ul>
 
 <h2>Purchases</h2>
 <p>Purchases and subscriptions are processed by Apple. We do not receive or store your card details. The app only sees whether Pro is active. Managing and cancelling a subscription happens in your Apple ID settings.</p>
-<p>To understand purchase statistics (how many trials start, how many convert) the app reports purchase events to <a href="https://www.revenuecat.com/">RevenueCat</a>, a purchases-analytics service, under a random identifier generated on your device. What is sent: which product was bought, when, in which country and currency, and whether a trial or a renewal took place — this is the purchase history category in Apple's privacy labels. What is never sent: your name, your email, your device identifiers, and anything from your books, translations or saved words. The identifier is not linked to your identity and is not used to track you across apps or websites. RevenueCat's own privacy policy: <a href="https://www.revenuecat.com/privacy/">revenuecat.com/privacy</a>.</p>
+<p>To understand purchase statistics (how many trials start, how many convert) the app reports purchase events to <a href="https://www.revenuecat.com/">RevenueCat</a>, a purchases-analytics service, under a random identifier generated on your device. What is sent: which product was bought, when, in which country and currency, and whether a trial or a renewal took place — this is the purchase history category in Apple's privacy labels. What is never sent: your name, your email, IDFA, IDFV, and anything from your books, translations or saved words. This random app identifier is not tied to an account with us and is not used to track you across apps or websites. RevenueCat's own privacy policy: <a href="https://www.revenuecat.com/privacy/">revenuecat.com/privacy</a>.</p>
 
 <h2>Analytics</h2>
-<p>To learn whether the introduction and the Pro offer are clear, the app sends anonymous usage statistics to <a href="https://www.revenuecat.com/">RevenueCat</a> under the same random identifier as purchase events. What is sent: how far you went through the introduction, whether you revealed the first translation, which book language and translation language you chose there, how many seconds the steps took, what happened on the Pro offer (closed, picked a plan, started a trial, bought, restored), and whether the app asked you for an App Store rating. This is the "product interaction" category in Apple's privacy labels. It is not linked to your identity and is not used to track you across apps or websites.</p>
-<p>What is never sent: your name, your email, your device identifiers, the text of your books, your translations, the words you save and anything you type. What you read and which words you save never leaves the device.</p>
+<p>From version 1.5.7, the app sends limited usage events to an analytics server operated by us to understand whether the introduction, reading features and Pro offer work as intended. Events include predefined actions (such as app launch, completing an introduction step, opening or closing the Pro offer, choosing a plan, purchase or restore outcome), bounded counts, event time, app version and build, and interface language. They do not contain free-form diagnostic messages.</p>
+<p>The app generates random installation, session and event identifiers. Before storing installation and session identifiers, our server replaces them with keyed hashes. These are pseudonymous device-level identifiers: events from the same installation can be associated with one another. They are not IDFA or IDFV, and we do not use them to identify you across other companies’ apps or websites. We disclose Device ID and Product Interaction for analytics as linked to the device in Apple’s privacy labels. The app does not send its RevenueCat identifier to this usage-event service.</p>
+<p>What is never sent to this service: book text, titles, authors, book identifiers, translations, saved words, imported URLs, filenames, file paths or anything you type. Reading content stays on your device.</p>
+<p>Usage events from the public release are retained for up to 90 days; development and TestFlight events for up to 7 days. A size limit may remove older events sooner. Network addresses are processed transiently for communication and abuse prevention, and are not stored in the usage-event database or routine analytics access logs. Technical error logs may contain an IP address and are rotated with up to 14 days of retained logs.</p>
+<p>Earlier app versions sent limited introduction and Pro-offer usage attributes to RevenueCat under its random app identifier. From version 1.5.7 these usage events go to our own service. RevenueCat continues to process purchases and standard Apple Ads attribution as described here. We do not sell analytics data or use it for advertising across other companies’ apps or websites.</p>
+<p>For questions about data access or deletion, contact us using the address below. Because we do not collect your name or email in the app, we may need information that identifies the relevant app installation to locate its events. Otherwise, those events expire under the retention periods above. Removing the app stops future usage events from that installation and removes its local reading content and queued events; it does not immediately remove events already stored on our server.</p>
 
 <h2>Apple Ads attribution</h2>
 <p>From version 1.5.1, to understand whether Apple Ads brings paying customers, the app sends a Standard AdServices attribution token to RevenueCat. RevenueCat requests attribution data from Apple and associates the available campaign, ad group, keyword and country or region with the same random app identifier used for purchase analytics. This is the advertising data category in Apple’s privacy labels, used for analytics. No IDFA or IDFV is collected by the app. It does not track you across apps or websites, and it does not send your books, translations or saved words. This feature uses Standard attribution and does not request App Tracking Transparency permission.</p>
