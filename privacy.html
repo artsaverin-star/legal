@@ -1,15 +1,4 @@
 <!doctype html>
-<!--
-  Политика конфиденциальности Roomdo 3.1. Отдаёт её служба аккаунтов на VM в
-  Яндекс Облаке КЗ: https://94.131.83.228/privacy (join-page.mjs, маршрут
-  /v2/account/legal/privacy, nginx-алиас из deploy/nginx_join_patch.py).
-  Относительно 3.0 изменились: имя участника (вводит сам или Apple при первом
-  входе, хранится зашифрованным, видно участникам общих комнат), многоразовая
-  ссылка-приглашение (7 дней, до 10 человек, страница /join), коды
-  приглашений теперь хранятся ещё и зашифрованными, ссылки на страницу
-  поддержки GitHub Pages убраны. Встроенный стиль закрыт CSP по sha256,
-  который сервер считает при запуске, — правка стиля хеш пересчитает сама.
--->
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -40,8 +29,8 @@
 </style>
 <body>
 <h1>Privacy Policy</h1>
-<p class="upd">Roomdo. Effective from version 3.1.</p>
-<p>Roomdo is a visual planner. You can use it without an account. Your tasks, notes, photos and rooms then stay on your device and, if you turn iCloud on, in your own private iCloud. Three parts of Roomdo send data to us or to other companies: the optional Roomdo account with shared rooms, optional AI objects, and purchase and usage analytics. Each is described below.</p>
+<p class="upd">Roomdo. Updated 26 October 2026. Effective from version 3.2.1.</p>
+<p>Roomdo is a visual planner. You can use it without an account. Your tasks, notes, photos and rooms then stay on your device and, if you turn iCloud on, in your own private iCloud. Three parts of Roomdo send data to us or to other companies: the optional Roomdo account with shared rooms, optional AI objects, and purchase processing and optional usage analytics. Each is described below.</p>
 
 <h2>In short</h2>
 <ul>
@@ -49,7 +38,7 @@
 <li>If you sign in with Apple, an encrypted copy of your planner is kept on our server in Kazakhstan, so your rooms can sync between devices and be shared. We receive an Apple user ID, never your email.</li>
 <li>Your name is optional. If you add it, or Apple shares it when you first sign in, people in your shared rooms see it.</li>
 <li>When you create an AI object, the task title, your optional description and the chosen style go to our server and, if needed, to OpenAI.</li>
-<li>Analytics (ActivationPal and RevenueCat) records how the app is used, never what you write in it.</li>
+<li>Optional usage analytics goes to our own server. Apple and RevenueCat process purchases. Usage analytics never includes what you write in your planner.</li>
 <li>No ads in the app. We don’t sell data and don’t track you across other companies’ apps or websites.</li>
 </ul>
 
@@ -89,31 +78,27 @@
 <p>Apple processes payments, and we never receive card details. To grant and restore tokens, our server checks Apple-signed app and purchase transactions. It stores app-specific identifiers, transaction IDs, product and subscription status, token grants, the balance and spending history. We use these records to deliver purchases, restore balances, handle refunds and prevent duplicate charges or abuse. These records are tied to your App Store purchase, not to your Roomdo account. They contain neither your Apple account email nor your password.</p>
 
 <h2>Analytics and ad attribution</h2>
-<p>We use two services to see where people get stuck and whether Roomdo pays for itself. Neither receives task names, notes, room names, member names, photos or AI descriptions.</p>
-<p><b>RevenueCat</b> tracks subscription status and purchases. It receives a random customer ID created by the app, your purchases, and simple progress markers such as how far you got in the introduction.</p>
-<p><b>ActivationPal</b> receives usage events. These include introduction steps, the subscription screen being shown or closed, a plan being chosen or bought, tasks and rooms being created, completed, moved or deleted, notification choices, and whether an AI object succeeded or failed. Each event carries only fixed categories, counts and yes/no flags. Events are linked to a random installation ID and to the RevenueCat customer ID. ActivationPal also receives:</p>
-<ul>
-<li>the app and iOS versions, device model, language, time zone, App Store country and install date;</li>
-<li>an approximate country and city, which its hosting provider works out from your network address and stores with the events;</li>
-<li>subscription events from RevenueCat: trials, purchases, renewals, cancellations and refunds.</li>
-</ul>
-<p>To tell installs from our Apple Ads campaigns apart from other installs, the app gets an attribution token from Apple and passes it to both services. They ask Apple which campaign, if any, led to the install. This uses Apple’s attribution API. It doesn’t use the advertising identifier (IDFA), doesn’t need tracking permission, and doesn’t link you with data from other companies.</p>
-<p>The app has no switch to turn analytics off. The random IDs are stored on your device and are removed when you delete the app.</p>
+<p>From version 3.2.1, sharing usage analytics is optional. The app asks before it starts sending usage events to our service. You can decline without losing planner, account, AI-object or purchase features, or change your choice later in Settings. Turning usage analytics off stops new usage events and clears unsent events waiting on the device. It does not immediately delete events already received by our server; those expire under the retention limits below, and you can contact us to request deletion.</p>
+<p><b>Roomdo usage analytics:</b> if you allow it, the app sends limited usage events to our own HTTPS server in Kazakhstan. Events include predefined actions such as introduction steps, showing or closing the Plus offer, choosing a plan, purchase or restore outcomes, tasks and rooms being created or completed, notification choices, and whether an AI object succeeded or failed. Event details use permitted categories, bounded counts and yes/no flags, together with event time, app version and build, interface language, and a coarse installation-age category. They do not contain free-form diagnostic messages.</p>
+<p>The app generates new random installation, session and event identifiers for this usage service. It does not reuse identifiers or import queued events from the former analytics client. Before storage, our server replaces the identifiers with keyed hashes. These are pseudonymous device-level identifiers: events from the same installation can be associated with one another. They are not IDFA or IDFV. The app does not send its RevenueCat identifier or Roomdo account identifier to this usage-event service, and usage events are not joined to purchase-customer or account identifiers.</p>
+<p>What is never sent to this usage service: task titles, task or room identifiers, notes, checklist text, room names, member names, photos, generated images, AI prompts or descriptions, filenames, imported URLs, purchase transaction identifiers or anything you type. The separate account-sync and AI-object services continue to process the content needed for those optional features, as described above.</p>
+<p><b>RevenueCat</b> continues to process subscription status, purchases and Apple Ads attribution. It receives a random customer ID created by the app and purchase information. From version 3.2.1, the app no longer sends planner, introduction or Plus-offer usage markers to RevenueCat. Apple StoreKit and the existing purchase/token service remain responsible for granting and restoring purchases.</p>
+<p>RevenueCat also sends purchase and subscription lifecycle notifications to our server. Our financial ledger keeps the product, event type and time, trial, renewal, cancellation and refund information, amounts and estimated proceeds. Customer, event and transaction identifiers are protected with keyed hashes; raw notification payloads and raw customer or transaction identifiers are not retained in that ledger. These financial records are separate from optional usage analytics. Turning usage analytics off does not turn off purchase processing or these financial notifications.</p>
+<p>To tell installs from our Apple Ads campaigns apart from other installs, RevenueCat obtains a Standard AdServices attribution token from Apple and asks which campaign, if any, led to the install. The new Roomdo usage client does not collect or send advertising attribution tokens. Apple Ads attribution does not use IDFA and is not used to track you across other companies’ apps or websites.</p>
+<p>Earlier app versions used a separate usage analytics service and sent some progress markers to RevenueCat. Updating stops those usage integrations in the app. This release does not import their historical data or queued events into the new optional usage stream. It does not itself delete data already collected by earlier versions; contact us about access or deletion.</p>
 
 <h2>Notifications and permissions</h2>
 <p>Reminders and other notifications are created on your device. Nothing is sent through a push server. You give notification permission when the app asks, and you can withdraw it in system settings. You pick photos with Apple’s system picker, so the app only sees the photos you choose. Saving an image to Photos asks for add-only access.</p>
 
 <h2>Who processes your data</h2>
 <p class="q">Our server: Yandex Cloud, Kazakhstan</p>
-<p>Roomdo accounts, member names, shared rooms and their invitation pages, AI object requests, the object library, token balances, purchase checks and this policy. Everything runs on one virtual machine in Yandex Cloud’s Kazakhstan region. Connections use HTTPS. Like any web server, ours sees your IP address when the app connects or a page opens. We don’t use it to identify or locate you. It is kept as a keyed hash for a few minutes to limit abuse, and it can appear in server error logs, which are deleted after 14 days.</p>
+<p>Roomdo accounts, member names, shared rooms and their invitation pages, AI object requests, the object library, token balances, purchase checks, optional usage analytics, financial records and this policy. Everything runs on one virtual machine in Yandex Cloud’s Kazakhstan region. Connections use HTTPS. Like any web server, ours sees your IP address when the app connects or a page opens. We don’t use it to identify or locate you. It is kept as a keyed hash for a few minutes to limit abuse, and it can appear in server error logs, which are rotated with up to 14 days of retained logs. Routine usage-event access logging is disabled; the usage database does not store raw network addresses.</p>
 <p class="q">Apple</p>
 <p>iCloud sync, Sign in with Apple, App Store payments and Apple Ads attribution. See <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</p>
 <p class="q">OpenAI: United States</p>
 <p>Draws new object images from the title, description and style.</p>
 <p class="q">RevenueCat: United States</p>
 <p>Subscription status and purchase analytics. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a>.</p>
-<p class="q">ActivationPal: United States</p>
-<p>Usage analytics. See <a href="https://activationpal.com/docs/privacy-security.md">ActivationPal’s privacy and security notes</a>.</p>
 <p>These companies may process data outside your country, mainly in the United States.</p>
 
 <h2>How long we keep data</h2>
@@ -123,13 +108,15 @@
 <li><b>Shared rooms:</b> on the server until the owner stops sharing or deletes their account. Then the room, its member list, its invitations and its files are deleted. Copies already on members’ devices stay with them. An invitation link stops working after 7 days, after 10 people have joined, or when the owner makes a new link.</li>
 <li><b>AI objects:</b> titles and descriptions are deleted as soon as the request finishes. Hashes and generated images stay as long as they serve the library.</li>
 <li><b>Purchases and tokens:</b> as long as needed for purchases, subscriptions, refunds and recordkeeping.</li>
-<li><b>Analytics:</b> ActivationPal has no automatic expiry, so events stay until we delete them. RevenueCat keeps customer records while we use the service.</li>
+<li><b>Our optional usage analytics:</b> public-release events are kept for up to 90 days. Debug and TestFlight events are kept for up to 7 days and are excluded from production reports. A size limit may remove older events sooner.</li>
+<li><b>Financial records:</b> the RevenueCat financial ledger has no automatic expiry; records remain until manually removed. RevenueCat keeps its customer records while we use the service. Historical data collected by an earlier analytics service is not deleted automatically by this app update.</li>
 <li><b>Backups:</b> our server keeps daily backups for up to 2 days and disk snapshots for up to 7 days. Deleted data can therefore remain in backups for up to 7 days.</li>
 </ul>
 
 <h2>Your choices and deleting data</h2>
 <ul>
 <li>You can use Roomdo without an account and without AI objects, or decline the AI permission request. With an account, you can leave your name empty.</li>
+<li><b>Usage analytics:</b> decline the initial request or turn usage analytics off in Settings. This stops new usage events and removes unsent events from the device. Already received events follow the retention limits above; contact us for access or deletion.</li>
 <li><b>Export:</b> Settings → Export data gives you a ZIP archive of your tasks and photos.</li>
 <li><b>On your device:</b> delete tasks and rooms in the app, or delete the app. You manage iCloud data in your iCloud settings.</li>
 <li><b>Delete your account:</b> Settings → Roomdo account → Delete account, then confirm with Apple. Our server deletes your planner copy, photos, name, sessions and the shared rooms you own, ends your membership in other people’s rooms, and revokes Roomdo’s Sign in with Apple access. The account’s copy on that device is removed, and the device goes back to the tasks it had before you signed in. A subscription is cancelled separately, in your Apple settings.</li>
