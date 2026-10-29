@@ -27,10 +27,13 @@
 <!-- Version-specific policy for Nomdo 1.0, 1.1 and 1.2. Release draft; publication is recorded separately. -->
 <p class="nav"><a href="index.html">← Support</a> · <a href="#ru">Русский</a></p>
 <h1>Privacy Policy</h1>
-<p class="upd">Nomdo. Updated 23 October 2026.</p>
+<p class="upd">Nomdo. Updated 29 October 2026.</p>
 
 <p>Nomdo does not require an account. Your personal recipe content stays on your device. Purchase information is processed separately. Usage analytics depends on the app version, as explained below.</p>
 
+<h2>Nomdo 1.4: setup, reminders and sharing</h2>
+<p>Nomdo 1.4 keeps the analytics described for 1.2 below and adds a few events: that the first-launch setup was shown, which of its screens was reached, whether it was finished or skipped together with the number of matching breakfasts, that a morning or trial reminder was turned on or off, that a reminder notification was opened, and that the app asked iOS for a rating prompt. Your setup answers (what you want to change, cooking time, taste, foods you avoid, ingredients, servings and breakfast time), the reminder time and the breakfast a reminder names are not sent; they stay on your device.</p>
+<p>Reminders are local notifications that iOS schedules on your device; no push server is involved. Turn them off in the app under Settings › Reminders or in iOS Settings. The dish card you share is created on your device, and iOS sends it only to the app or recipient you choose. Saving it to Photos asks iOS for permission to add an image; Nomdo does not read your photo library.</p>
 <h2>Nomdo 1.2: our own analytics</h2>
 <p>Nomdo 1.2 replaces the ActivationPal client with our own analytics service. The app sends fixed app-open, screen, recipe-opening, favorite-change, filter, product-count, serving, photo-share and purchase-flow events. Events include random installation, session and event IDs, timestamps, the RevenueCat customer ID, app version/build and selected app language. A first-open event may also include an approximate app-container age in days and an installation-context category. Recipe content, ingredient names, favorite lists and photos are not sent. This version does not send Apple Ads attribution tokens to our analytics service; RevenueCat retains its separate Apple Ads integration.</p>
 <p>Our collector stores pseudonymous HMAC identifiers rather than raw installation, session or RevenueCat customer IDs. It removes usage events after 90 days (test events after seven days). The network address is needed for delivery and temporary rate limiting; our usage records do not store it or derive a city from it. RevenueCat purchase records have their own retention policy. Existing installations keep their previous local data, and updating is not counted as a new installation.</p>
@@ -41,7 +44,7 @@
 <p><b>Nomdo 1.1:</b> RevenueCat and ActivationPal integration adds usage analytics and Apple Ads measurement after you install this version. It cannot reconstruct earlier app sessions or subscription-screen interactions. A first SDK launch may belong to an existing installation that has updated.</p>
 
 <h2>What stays on your device</h2>
-<p>Your ingredients, favorite breakfasts, personal recipes, photos and appearance preferences stay in the app’s protected container and are not sent to analytics services. Your selected app language is included in analytics context in versions 1.1 and 1.2. Breakfast matching and ingredient-name search work offline. If you choose to share a photo, iOS sends the selected image to the app or recipient you choose; that service has its own privacy practices. Device backups are controlled by your Apple settings.</p>
+<p>Your ingredients, favorite breakfasts, setup answers, foods you avoid, reminder settings, personal recipes, photos and appearance preferences stay in the app’s protected container and are not sent to analytics services. Your selected app language is included in analytics context in versions 1.1 to 1.4. Breakfast matching and ingredient-name search work offline. If you choose to share a photo, iOS sends the selected image to the app or recipient you choose; that service has its own privacy practices. Device backups are controlled by your Apple settings.</p>
 
 <h2>New breakfasts</h2>
 <p>The app downloads a shared public catalog and its pictures from our server. Catalog requests do not include your ingredients, favorites, personal recipes or photos. The server receives the network address needed to deliver a response. We do not keep access logs for these catalog requests.</p>
@@ -74,10 +77,13 @@
 
 <div lang="ru" id="ru">
 <h1>Политика конфиденциальности</h1>
-<p class="upd">Nomdo. Обновлено 23 октября 2026 года.</p>
+<p class="upd">Nomdo. Обновлено 29 октября 2026 года.</p>
 
 <p>Для Nomdo не нужна учётная запись. Содержимое ваших личных рецептов хранится на устройстве. Сведения о покупках обрабатываются отдельно. Аналитика использования зависит от версии приложения — различия описаны ниже.</p>
 
+<h2>Nomdo 1.4: знакомство, напоминания и карточки блюд</h2>
+<p>Nomdo 1.4 сохраняет аналитику, описанную ниже для версии 1.2, и добавляет несколько событий: показ знакомства при первом запуске, номер экрана, до которого вы дошли, завершение или пропуск вместе с числом подходящих завтраков, включение или выключение утреннего напоминания и напоминания о пробном периоде, открытие уведомления и запрос оценки у iOS. Ваши ответы при знакомстве (что хотите изменить, время на готовку, вкус, ограничения, продукты, число порций и время завтрака), время напоминания и названное в нём блюдо не передаются и остаются на устройстве.</p>
+<p>Напоминания — локальные уведомления, которые iOS планирует на вашем устройстве; push-сервер не используется. Отключить их можно в приложении: Настройки → «Напоминания», или в настройках iOS. Карточка блюда создаётся на устройстве, и iOS передаёт её только выбранному вами приложению или получателю. Для сохранения в «Фото» iOS спрашивает разрешение на добавление изображения; Nomdo не читает вашу медиатеку.</p>
 <h2>Nomdo 1.2: собственная аналитика</h2>
 <p>В Nomdo 1.2 клиент ActivationPal заменён собственной аналитикой. Приложение передаёт фиксированные события открытия приложения, экранов и рецептов, изменения избранного, фильтров, количества продуктов и порций, процесса обмена фото и покупки. События содержат случайные идентификаторы установки, сессии и события, время, идентификатор клиента RevenueCat, версию и номер сборки приложения и выбранный язык. Событие первого открытия также может содержать примерный возраст контейнера приложения в днях и категорию контекста установки. Содержимое рецептов, названия продуктов, списки избранного и фотографии не передаются. Эта версия не отправляет токены атрибуции Apple Ads в нашу аналитику; отдельная интеграция RevenueCat с Apple Ads сохраняется.</p>
 <p>Наш сборщик хранит псевдонимные HMAC-идентификаторы вместо исходных идентификаторов установки, сессии и клиента RevenueCat. События использования удаляются через 90 дней, тестовые — через семь. Сетевой адрес нужен для доставки и временного ограничения частоты запросов; он не сохраняется в записях использования и не используется для определения города. Для записей о покупках в RevenueCat действуют отдельные правила хранения. Прежние локальные данные сохраняются, обновление не считается новой установкой.</p>
@@ -88,7 +94,7 @@
 <p><b>Nomdo 1.1:</b> интеграция RevenueCat и ActivationPal добавляет аналитику использования и измерение Apple Ads после установки этой версии. Она не восстанавливает прежние сессии или действия на экране подписки. Первый запуск SDK может относиться к прежней установке, которая обновилась.</p>
 
 <h2>Что хранится на устройстве</h2>
-<p>Ваши продукты, избранные завтраки, личные рецепты, фотографии и тема оформления сохраняются в защищённом контейнере приложения и не передаются в аналитику. Выбранный язык приложения входит в контекст аналитики версий 1.1 и 1.2. Подбор завтраков и поиск названий продуктов работают без интернета. Если вы решите поделиться фотографией, iOS передаст выбранную картинку указанному вами приложению или получателю; у этого сервиса действуют свои правила конфиденциальности. Резервные копии устройства зависят от настроек Apple.</p>
+<p>Ваши продукты, избранные завтраки, ответы при знакомстве, ограничения в еде, настройки напоминаний, личные рецепты, фотографии и тема оформления сохраняются в защищённом контейнере приложения и не передаются в аналитику. Выбранный язык приложения входит в контекст аналитики версий с 1.1 по 1.4. Подбор завтраков и поиск названий продуктов работают без интернета. Если вы решите поделиться фотографией, iOS передаст выбранную картинку указанному вами приложению или получателю; у этого сервиса действуют свои правила конфиденциальности. Резервные копии устройства зависят от настроек Apple.</p>
 
 <h2>Новые завтраки</h2>
 <p>Приложение загружает общий публичный каталог и картинки с нашего сервера. Запросы каталога не содержат ваших продуктов, избранного, личных рецептов или фотографий. Сервер получает сетевой адрес, необходимый для доставки ответа. Журналы доступа для этих запросов мы не ведём.</p>
